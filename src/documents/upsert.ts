@@ -139,6 +139,8 @@ async function upsertDocuments() {
   Object.entries(stats).forEach(([format, count]) => {
     console.log(`${format}: ${count} chunks`);
   });
+
+  process.exit(0);
 }
 
 // Run the upsert

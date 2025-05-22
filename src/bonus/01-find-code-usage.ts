@@ -20,6 +20,8 @@ async function findCodeExample() {
     "Find the withDbErrorHandling function implementation in our error handling system"
   );
   console.log("\nError Handling Function Search:", errorResponse.text);
+
+  process.exit(0);
 }
 
 findCodeExample().catch(console.error);

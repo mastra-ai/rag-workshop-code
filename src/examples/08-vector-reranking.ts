@@ -31,6 +31,8 @@ async function rerankingExample() {
 
   console.log("\nReranked Results:");
   console.log(rerankedResults);
+
+  process.exit(0);
 }
 
 rerankingExample().catch(console.error);

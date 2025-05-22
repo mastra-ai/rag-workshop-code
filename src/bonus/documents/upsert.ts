@@ -109,6 +109,8 @@ async function upsertCodeDocuments() {
   });
 
   console.log("Code documents upserted successfully!");
+
+  process.exit(0);
 }
 
 /**

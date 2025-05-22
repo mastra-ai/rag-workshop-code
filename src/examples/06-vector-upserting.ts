@@ -102,6 +102,7 @@ async function upsertExampleVectors() {
   });
 
   console.log(`Successfully upserted ${chunks.length} embeddings`);
+  process.exit(0);
 }
 
 // Run the example

@@ -20,6 +20,8 @@ async function basicSearchExample() {
     "What monitoring configurations are available in our system?"
   );
   console.log("\nConfiguration Search:", configResponse.text);
+
+  process.exit(0);
 }
 
 basicSearchExample().catch(console.error);

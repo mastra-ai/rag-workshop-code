@@ -37,6 +37,8 @@ async function searchExample() {
 
   console.log("\nFiltered Search Results:");
   console.log(filteredResults);
+
+  process.exit(0);
 }
 
 searchExample().catch(console.error);

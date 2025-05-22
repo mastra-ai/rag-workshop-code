@@ -23,6 +23,8 @@ async function queryVectorExample() {
   );
 
   console.log("\nAuthentication Search:", authResponse.text);
+
+  process.exit(0);
 }
 
 queryVectorExample().catch(console.error);
