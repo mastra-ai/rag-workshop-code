@@ -85,7 +85,7 @@ async function upsertExampleVectors() {
   const pgVector = mastra.getVector("pg");
 
   // Delete existing index (if exists)
-  await pgVector.deleteIndex("searchExamples");
+  await pgVector.deleteIndex({ indexName: "searchExamples" });
   // Create index
   await pgVector.createIndex({
     indexName: "searchExamples",

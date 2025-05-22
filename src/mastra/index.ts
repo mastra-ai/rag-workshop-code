@@ -10,7 +10,7 @@ if (!connectionString) {
     "POSTGRES_CONNECTION_STRING environment variable is required"
   );
 }
-const pgVector = new PgVector(connectionString);
+const pgVector = new PgVector({ connectionString });
 export const mastra = new Mastra({
   agents: {
     queryVectorAgent,
