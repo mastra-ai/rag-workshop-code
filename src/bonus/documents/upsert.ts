@@ -89,7 +89,7 @@ async function upsertCodeDocuments() {
   });
 
   // Delete existing index (if exists)
-  await pgVector.deleteIndex("bonus");
+  await pgVector.deleteIndex({ indexName: "bonus" });
   await pgVector.createIndex({
     indexName: "bonus",
     dimension: 1536,

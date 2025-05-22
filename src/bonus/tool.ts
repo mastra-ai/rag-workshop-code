@@ -22,7 +22,7 @@ export const findCodeTool = createTool({
       .describe("Section of the codebase to search in"),
   }),
   execute: async ({ context: { query, type, section }, mastra }) => {
-    const vectorStore = mastra?.vectors?.pg;
+    const vectorStore = mastra?.getVector("pg");
     if (!vectorStore) {
       throw new Error("Vector store not found");
     }

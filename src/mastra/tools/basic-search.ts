@@ -11,7 +11,7 @@ export const basicSearchTool = createTool({
     limit: z.number().default(5).describe("Number of results to return"),
   }),
   execute: async ({ context: { query, limit }, mastra }) => {
-    const vectorStore = mastra?.vectors?.pg;
+    const vectorStore = mastra?.getVector("pg");
     if (!vectorStore) {
       throw new Error("Vector store not found");
     }
