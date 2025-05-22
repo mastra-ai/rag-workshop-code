@@ -1,7 +1,7 @@
 import { Agent } from "@mastra/core/agent";
 import { queryVectorTool } from "../tools";
 import { openai } from "@ai-sdk/openai";
-import { PGVECTOR_PROMPT } from "@mastra/rag";
+import { PGVECTOR_PROMPT } from "@mastra/pg";
 
 export const queryVectorAgent = new Agent({
   name: "queryVectorAgent",

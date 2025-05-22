@@ -54,27 +54,31 @@ Contains markdown and json documents used to test our RAG functionality:
    - Single vs batch embedding
    - Comparing embedding dimensions and quality
 
-### Vector Store Operations (`src/examples/05-07`)
+### Vector Store Operations (`src/examples/06-09`)
 
-5. **Vector Upserting** (`06-vector-upserting.ts`)
+6. **Vector Upserting** (`06-vector-upserting.ts`)
    - How to insert documents into PgVector
    - Complete flow: chunking → embedding → storing
 
-6. **Vector Search** (`07-vector-search.ts`)
+7. **Vector Update** (`07-vector-update-delete.ts`)
+   - How to update and delete documents in PgVector
+   - Complete flow: updating → embedding → updating
+
+8. **Vector Search** (`08-vector-search.ts`)
    - Basic vector similarity search
    - Shows simple querying with filters
 
-7. **Vector Reranking** (`08-vector-reranking.ts`)
+9. **Vector Reranking** (`09-vector-reranking.ts`)
    - Advanced search with result reranking
    - Demonstrates improving result relevance
 
-### Agent Examples (`src/examples/09-10`)
+### Agent Examples (`src/examples/10-11`)
 
-8. **Basic Search** (`09-basic-search-usage.ts`)
+10. **Basic Search** (`10-basic-search-usage.ts`)
    - Simple keyword search through an agent
    - Example: "What does our documentation say about authentication?"
 
-9. **Vector Search** (`010-query-vector-usage.ts`)
+11. **Vector Search** (`11-query-vector-usage.ts`)
    - Semantic search through an agent with:
      - Basic search
      - Filtered search (by file type)
@@ -102,8 +106,9 @@ pnpm tsx src/examples/04-markdown-chunking.ts
 ```bash
 pnpm tsx src/examples/05-embedding.ts
 pnpm tsx src/examples/06-vector-upserting.ts
-pnpm tsx src/examples/07-vector-search.ts
-pnpm tsx src/examples/08-vector-reranking.ts
+pnpm tsx src/examples/07-vector-update-delete.ts
+pnpm tsx src/examples/08-vector-search.ts
+pnpm tsx src/examples/09-vector-reranking.ts
 ```
 
 3. Explore the agent examples to see RAG in action:
@@ -114,8 +119,8 @@ pnpm tsx src/documents/upsert.ts
 ```
 
 ```bash
-pnpm tsx src/examples/09-basic-search-usage.ts
-pnpm tsx src/examples/10-query-vector-usage.ts
+pnpm tsx src/examples/10-basic-search-usage.ts
+pnpm tsx src/examples/11-query-vector-usage.ts
 ```
 
 ## Key Concepts
