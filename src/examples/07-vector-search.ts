@@ -12,7 +12,7 @@ async function searchExample() {
   const pgVector = mastra.getVector("pg");
 
   const basicResults = await pgVector.query({
-    indexName: "searchExamples",
+    indexName: "searchexamples",
     queryVector: basicEmbedding,
     topK: 3,
   });
@@ -27,7 +27,7 @@ async function searchExample() {
   });
 
   const filteredResults = await pgVector.query({
-    indexName: "searchExamples",
+    indexName: "searchexamples",
     queryVector: filteredEmbedding,
     topK: 3,
     filter: {

@@ -16,7 +16,7 @@ async function rerankingExample() {
 
   // Get initial results
   const results = await pgVector.query({
-    indexName: "searchExamples",
+    indexName: "searchexamples",
     queryVector: embedding,
     topK: 10,
   });
